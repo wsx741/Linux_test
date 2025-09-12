@@ -34,4 +34,5 @@ cout << "减法运算：" << b << " - " << a << " = " << calc.operator_jian(b,a)
 cout << "乘法运算：" << a << " * " << b << " = " << calc.operator_chen(a,b) << endl;
 cout << "除法运算：" << b << " / " << a << " = " << calc.operator_chu(b,a) << endl;
 cout << "=== 运算完成 ===" << endl;
+cout<<"cgong"<<endl;
 }
