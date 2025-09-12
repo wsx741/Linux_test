@@ -1,0 +1,24 @@
+# 通用忽略
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Node.js
+node_modules/
+dist/
+build/
+.nyc_output/
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
