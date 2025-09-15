@@ -10,5 +10,7 @@ int main()
     cout << *(p2 + 2) <<endl;
     delete p1;
     delete[] p2;
+    cout << *p1 << endl;
+    cout << p2[2] << endl;
     return 0;
 }
