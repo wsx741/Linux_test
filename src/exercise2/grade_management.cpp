@@ -65,11 +65,6 @@ void inputStudents(vector<Student>& students, int count) {
 // 将学生信息保存到文件
 void saveToFile(const vector<Student>& students, const string& filename) {
     ofstream outFile(filename);
-    if (!outFile) {
-        cerr << "无法创建文件 " << filename << endl;
-        return;
-    }
-    
     for (const auto& student : students) {
         outFile << student.name << " "
                 << student.id << " "
@@ -83,11 +78,6 @@ void saveToFile(const vector<Student>& students, const string& filename) {
 // 从文件中读取学生信息
 void loadFromFile(vector<Student>& students, const string& filename) {
     ifstream inFile(filename);
-    if (!inFile) {
-        cerr << "无法打开文件 " << filename << endl;
-        return;
-    }
-    
     for (auto& student : students) {
         inFile >> student.name 
                >> student.id 

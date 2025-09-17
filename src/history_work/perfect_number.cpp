@@ -1,0 +1,66 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+// 判断一个数是否为完全数
+bool isPerfectNumber(int num) {
+    // 完全数必须是大于1的正整数
+    if (num <= 1) {
+        return false;
+    }
+    
+    int sum = 0;
+    vector<int> factors;
+    
+    // 查找所有因数（除了数字本身）
+    for (int i = 1; i < num; i++) {
+        if (num % i == 0) {
+            sum += i;
+            factors.push_back(i);
+        }
+    }
+    
+    // 输出因数分解过程（用于验证）
+    cout << num << " 的因数有: ";
+    for (size_t i = 0; i < factors.size(); i++) {
+        cout << factors[i];
+        if (i < factors.size() - 1) {
+            cout << " + ";
+        }
+    }
+    cout << " = " << sum << endl;
+    
+    // 判断是否为完全数
+    return sum == num;
+}
+
+int main() {
+    int number;
+    
+    cout << "=== 完全数判断程序 ===" << endl;
+    cout << "请输入一个正整数: ";
+    cin >> number;
+    
+    // 检查输入是否有效
+    if (number <= 0) {
+        cout << "错误：请输入一个正整数！" << endl;
+        return 1;
+    }
+    
+    cout << "\n判断过程：" << endl;
+    if (isPerfectNumber(number)) {
+        cout << number << " 是完全数。" << endl;
+    } else {
+        cout << number << " 不是完全数。" << endl;
+    }
+    
+    // 展示一些已知的完全数示例
+    cout << "\n已知的完全数示例：" << endl;
+    cout << "6 = 1 + 2 + 3" << endl;
+    cout << "28 = 1 + 2 + 4 + 7 + 14" << endl;
+    cout << "496 = 1 + 2 + 4 + 8 + 16 + 31 + 62 + 124 + 248" << endl;
+    cout << "8128 是下一个完全数" << endl;
+    
+    return 0;
+}
