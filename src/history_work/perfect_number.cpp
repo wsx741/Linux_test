@@ -37,30 +37,16 @@ bool isPerfectNumber(int num) {
 
 int main() {
     int number;
-    
-    cout << "=== 完全数判断程序 ===" << endl;
     cout << "请输入一个正整数: ";
     cin >> number;
-    
-    // 检查输入是否有效
     if (number <= 0) {
         cout << "错误：请输入一个正整数！" << endl;
         return 1;
     }
-    
-    cout << "\n判断过程：" << endl;
     if (isPerfectNumber(number)) {
         cout << number << " 是完全数。" << endl;
     } else {
         cout << number << " 不是完全数。" << endl;
     }
-    
-    // 展示一些已知的完全数示例
-    cout << "\n已知的完全数示例：" << endl;
-    cout << "6 = 1 + 2 + 3" << endl;
-    cout << "28 = 1 + 2 + 4 + 7 + 14" << endl;
-    cout << "496 = 1 + 2 + 4 + 8 + 16 + 31 + 62 + 124 + 248" << endl;
-    cout << "8128 是下一个完全数" << endl;
-    
     return 0;
 }
